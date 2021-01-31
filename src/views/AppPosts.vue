@@ -7,6 +7,7 @@
             <th scope="col">title</th>
             <th scope="col">text</th>
             <th scope="col"></th>
+            <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -15,6 +16,7 @@
 							<td>{{post.title}}</td>
 							<td>{{post.text}}</td>
                             <td><router-link :to="`/post/${post.id}`" class="btn btn-info">View Post</router-link></td>
+                            <td><router-link :to="`/posts/${post.id}/edit`" class="btn btn-warning">Edit Post</router-link></td>
             </tr>
         </tbody>
         </table>

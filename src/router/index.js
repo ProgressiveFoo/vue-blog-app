@@ -1,15 +1,14 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
 import AppPosts from "../views/AppPosts.vue";
 import Post from "../views/Post.vue";
+import AddNewPost from "../views/AddNewPost.vue";
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    redirect: "/posts",
   },
   {
     path: "/posts",
@@ -20,6 +19,16 @@ const routes = [
     path: "/post/:id",
     name: "Post",
     component: Post,
+  },
+  {
+    path: "/add",
+    name: "AddNewPost",
+    component: AddNewPost,
+  },
+  {
+    path: "/posts/:id/edit",
+    name: "EditPost",
+    component: AddNewPost,
   },
 ];
 

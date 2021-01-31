@@ -18,6 +18,16 @@ class PostService {
       console.log(error);
     }
   }
+
+  async createPost(post) {
+    const response = await http.post("posts", post);
+    return response;
+  }
+
+  async update(postId, data) {
+    const response = await http.put(`posts/${postId}`, data);
+    return response.data;
+  }
 }
 
 const postService = new PostService();
